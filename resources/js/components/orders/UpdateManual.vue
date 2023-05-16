@@ -33,6 +33,7 @@ export default {
         async getOrderDetails() {
             await axios.get('/order/get/orders')
             .then(response=>{
+                this.order_ids = [];
                 response.data.forEach((item)=>{
                     this.order_ids.push(item['id']);
                 });

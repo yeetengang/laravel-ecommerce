@@ -17527,13 +17527,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             case 0:
               _context.next = 2;
               return axios.get('/notifications').then(function (response) {
+                _this.notifications = [];
                 response.data.forEach(function (item) {
                   if (!item['checked']) {
                     _this.notifications.push(item);
                   }
                 });
-                console.log(_this.notifications);
               })["catch"](function (error) {
+                _this.notifications = [];
                 console.log(error);
               });
             case 2:
@@ -17678,6 +17679,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             case 0:
               _context.next = 2;
               return axios.get('/order/get/orders').then(function (response) {
+                _this.order_ids = [];
                 response.data.forEach(function (item) {
                   _this.order_ids.push(item['id']);
                 });

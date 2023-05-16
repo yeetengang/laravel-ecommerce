@@ -20,13 +20,14 @@ export default {
     methods: {
         async getNotifications(){
             await axios.get('/notifications').then(response=>{
+                this.notifications = [];
                 response.data.forEach((item)=>{
                     if (!item['checked']) {
                         this.notifications.push(item);
                     }
                 });
-                console.log(this.notifications);
             }).catch(error=>{
+                this.notifications = [];
                 console.log(error)
             })
         },
