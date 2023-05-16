@@ -5,6 +5,7 @@ import Cart from './components/cart/Cart.vue';
 import Checkout from './components/cart/Checkout.vue';
 import Order from './components/orders/Order.vue';
 import Dropdown from './components/orders/Dropdown.vue';
+import UpdateManual from './components/orders/UpdateManual.vue';
 import {createRouter, createWebHistory} from 'vue-router';
 import {routesList} from './routes';
 import Toaster from '@meforma/vue-toaster';
@@ -31,3 +32,6 @@ app4.mount('#app4')
 
 const app5 = createApp(Dropdown)
 app5.mount('#app5')
+
+const app6 = createApp(UpdateManual)
+app6.mount('#app6')

@@ -31,7 +31,6 @@ export default {
         async getProductsLocal(){
             await axios.get('/api/local').then(response=>{
                 this.productsLocal = response.data
-                console.log(response.data);
             }).catch(error=>{
                 console.log(error)
                 this.productsLocal = []

@@ -35,7 +35,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               _context.next = 2;
               return axios.get('/api/local').then(function (response) {
                 _this.productsLocal = response.data;
-                console.log(response.data);
               })["catch"](function (error) {
                 console.log(error);
                 _this.productsLocal = [];

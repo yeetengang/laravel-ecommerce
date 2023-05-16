@@ -3,9 +3,6 @@
         <div class="row">
           <div class="display-header d-flex justify-content-between pb-3">
             <h2 class="display-7 text-dark text-uppercase">Products - Groceries</h2>
-            <div class="btn-right">
-              <a href="#" class="btn btn-medium btn-normal text-uppercase">More Products</a>
-            </div>
           </div>
           <div class="swiper product-watch-swiper">
             <div class="swiper-wrapper">
@@ -37,7 +34,7 @@ export default {
     data(){
         return{
             products: []
-    }
+        }
     },
     mounted(){
         this.getProducts()
@@ -53,7 +50,6 @@ export default {
                     'Access-Control-Allow-Headers': 'Content-Type, Authorization'
                 }
             }).then(response=>{
-                console.log(response.data)
                 this.products = response.data
             }).catch(error=>{
                 console.log(error)
@@ -64,7 +60,6 @@ export default {
             await axios.post('/api/cart', {
                 'product_id': id
             }).then(response=>{
-                console.log(response.data);
             }).catch(error=>{
                 console.log(error);
             });

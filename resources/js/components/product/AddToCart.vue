@@ -33,7 +33,6 @@ export default {
                 'product_id': this.productID,
                 'product_name': this.productName
             }).then(response=>{
-                console.log(response);
                 this.$toast.show(response.data['message']);
                 //this.$emit('changeInCart', response.data['item']);
             }).catch(error=>{
@@ -42,7 +41,7 @@ export default {
         }
     },
     mounted(){
-        console.log("Add to Cart btn mounted")
+        
     },
 }
 </script>

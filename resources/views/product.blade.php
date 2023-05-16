@@ -41,6 +41,9 @@
         } else {
           toastr.success('You got an order updated to ' + jsonData['status'], 'Order Status Updated');
         }
+        setTimeout(() => {
+           window.location.href = window.location.href;
+        }, 800);
       });
     </script>
     <style>
