@@ -18144,7 +18144,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
       href: '/order#' + notice.order_id,
       onClick: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function ($event) {
-        return $options.checkedNotification(notice.id);
+        return $options.checkedNotification(notice.order_id);
       }, ["prevent"])
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(notice.message), 9 /* TEXT, PROPS */, _hoisted_6)]);
   }), 128 /* KEYED_FRAGMENT */))])]);

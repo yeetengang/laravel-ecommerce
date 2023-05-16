@@ -3,7 +3,7 @@
         <a href="#" role="button" aria-expanded="false" aria-haspopup="true" class="dropbtn"><i class="bi bi-bell-fill"></i><span class="badge bg-secondary" v-if="notifications.length > 0">{{notifications.length}}</span></a>
         <div class="dropdown-content">
             <div class="" v-for="(notice, key) in notifications" :key="key">
-                <a :href="'/order#' + notice.order_id" v-on:click.prevent="checkedNotification(notice.id)">{{notice.message}}</a>
+                <a :href="'/order#' + notice.order_id" v-on:click.prevent="checkedNotification(notice.order_id)">{{notice.message}}</a>
             </div>
         </div>
     </div>
